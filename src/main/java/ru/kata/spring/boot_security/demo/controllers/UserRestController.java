@@ -67,7 +67,6 @@ public class UserRestController {
     }
 
     @PutMapping("/users/{id}")
-    //@PutMapping("/{id}")
     public ResponseEntity<Void> editUser(@PathVariable Long id, @RequestBody User user) {
         userService.editUser(id, user);
         return ResponseEntity.ok().build();
